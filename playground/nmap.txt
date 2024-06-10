@@ -1,39 +1,26 @@
-Starting Nmap 7.93 ( https://nmap.org ) at 2024-04-27 10:22 EDT
-Nmap scan report for 10.10.11.191
-Host is up (0.37s latency).
-Not shown: 890 filtered tcp ports (no-response), 107 closed tcp ports (conn-refused)
-PORT    STATE SERVICE VERSION
-22/tcp  open  ssh     OpenSSH 8.2p1 Ubuntu 4ubuntu0.5 (Ubuntu Linux; protocol 2.0)
+Starting Nmap 7.93 ( https://nmap.org ) at 2024-05-13 19:59 EDT
+Warning: 10.10.11.180 giving up on port because retransmission cap hit (10).
+Nmap scan report for shoppy.htb (10.10.11.180)
+Host is up (0.83s latency).
+Not shown: 51121 closed tcp ports (reset), 14412 filtered tcp ports (no-response)
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 8.4p1 Debian 5+deb11u1 (protocol 2.0)
 | ssh-hostkey: 
-|   3072 48add5b83a9fbcbef7e8201ef6bfdeae (RSA)
-|   256 b7896c0b20ed49b2c1867c2992741c1f (ECDSA)
-|_  256 18cd9d08a621a8b8b6f79f8d405154fb (ED25519)
-80/tcp  open  http    Apache httpd 2.4.41 ((Ubuntu))
-|_http-title: Built Better
-111/tcp open  rpcbind 2-4 (RPC #100000)
-| rpcinfo: 
-|   program version    port/proto  service
-|   100000  2,3,4        111/tcp   rpcbind
-|   100000  2,3,4        111/udp   rpcbind
-|   100000  3,4          111/tcp6  rpcbind
-|   100000  3,4          111/udp6  rpcbind
-|   100003  3           2049/udp   nfs
-|   100003  3           2049/udp6  nfs
-|   100003  3,4         2049/tcp   nfs
-|   100003  3,4         2049/tcp6  nfs
-|   100005  1,2,3      34651/udp6  mountd
-|   100005  1,2,3      36374/udp   mountd
-|   100005  1,2,3      43529/tcp6  mountd
-|   100005  1,2,3      45189/tcp   mountd
-|   100021  1,3,4      33551/tcp   nlockmgr
-|   100021  1,3,4      34136/udp6  nlockmgr
-|   100021  1,3,4      40021/tcp6  nlockmgr
-|   100021  1,3,4      41730/udp   nlockmgr
-|   100227  3           2049/tcp   nfs_acl
-|   100227  3           2049/tcp6  nfs_acl
-|   100227  3           2049/udp   nfs_acl
-|_  100227  3           2049/udp6  nfs_acl
+|   3072 9e5e8351d99f89ea471a12eb81f922c0 (RSA)
+|   256 5857eeeb0650037c8463d7a3415b1ad5 (ECDSA)
+|_  256 3e9d0a4290443860b3b62ce9bd9a6754 (ED25519)
+80/tcp open  http    nginx 1.23.1
+|_http-server-header: nginx/1.23.1
+|_http-title:             Shoppy Wait Page        
+Aggressive OS guesses: Linux 3.1 (95%), Linux 3.2 (95%), AXIS 210A or 211 Network Camera (Linux 2.6.17) (94%), ASUS RT-N56U WAP (Linux 3.4) (93%), Linux 3.16 (93%), Linux 4.15 - 5.6 (93%), Linux 5.4 (93%), Android 4.1.1 (92%), Linux 3.2 - 4.9 (92%), Linux 3.8 (92%)
+No exact OS matches for host (test conditions non-ideal).
+Network Distance: 2 hops
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
-Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-Nmap done: 1 IP address (1 host up) scanned in 38.92 seconds
+TRACEROUTE (using port 23/tcp)
+HOP RTT       ADDRESS
+1   725.22 ms 10.10.16.1
+2   398.63 ms shoppy.htb (10.10.11.180)
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 150.33 seconds
